@@ -1,4 +1,7 @@
-const todos = [
+import {todos} from './reducer';
+import { createStore } from 'redux';
+
+const defaultTodos  = [
   { 
       id: 1,
       content: "学习 React"
@@ -12,5 +15,5 @@ const todos = [
       content: "学习 react-router"
   },
 ];
-
-export default todos;
+const store = createStore(todos, defaultTodos);
+export default store;

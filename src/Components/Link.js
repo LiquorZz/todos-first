@@ -1,7 +1,9 @@
 import React from 'react'
-const Link = ({children}) => (
+import { Link as RouteLink } from 'react-router-dom';
+
+const Link = ({ filter, children }) => (
   <li>
-    <a href='/#'>{children}</a>
+    <RouteLink to={"/" + filter}>{children}</RouteLink>
   </li>
 )
 export default Link;
